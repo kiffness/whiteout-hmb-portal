@@ -92,103 +92,105 @@ export default function PlayerStatsForm() {
   };
 
   return (
-    <div className="form-container">
-      <form onSubmit={handleSubmit} className="form">
-        {/* Logo */}
-        <img src={Logo} alt="Logo" className="logo-image" />
+    <div className="page-wrapper">
+      <div className="form-container">
+        <form onSubmit={handleSubmit} className="form">
+          {/* Logo */}
+          <img src={Logo} alt="Logo" className="logo-image" />
 
-        {/* Troops Amount */}
-        <div className="form-group">
-          <label>Troops Amount</label>
-          <input
-            type="number"
-            name="troopsAmount"
-            value={formData.troopsAmount}
-            onChange={handleChange}
-            className={errors.troopsAmount ? "input-error" : ""}
-          />
-          {errors.troopsAmount && (
-            <span className="error-message">{errors.troopsAmount}</span>
-          )}
-        </div>
+          {/* Troops Amount */}
+          <div className="form-group">
+            <label>Troops Amount</label>
+            <input
+              type="number"
+              name="troopsAmount"
+              value={formData.troopsAmount}
+              onChange={handleChange}
+              className={errors.troopsAmount ? "input-error" : ""}
+            />
+            {errors.troopsAmount && (
+              <span className="error-message">{errors.troopsAmount}</span>
+            )}
+          </div>
 
-        {/* Max Level Troop */}
-        <div className="form-group">
-          <label>Max Level Troop</label>
-          <select
-            name="maxLevelTroop"
-            value={formData.maxLevelTroop}
-            onChange={handleChange}
-            className={errors.maxLevelTroop ? "input-error" : ""}
-          >
-            <option value="">Select your highest troop level</option>
-            {maxLevelTroopList.map((level) => (
-              <option key={level} value={level}>
-                {level}
-              </option>
-            ))}
-          </select>
-          {errors.maxLevelTroop && (
-            <span className="error-message">{errors.maxLevelTroop}</span>
-          )}
-        </div>
+          {/* Max Level Troop */}
+          <div className="form-group">
+            <label>Max Level Troop</label>
+            <select
+              name="maxLevelTroop"
+              value={formData.maxLevelTroop}
+              onChange={handleChange}
+              className={errors.maxLevelTroop ? "input-error" : ""}
+            >
+              <option value="">Select your highest troop level</option>
+              {maxLevelTroopList.map((level) => (
+                <option key={level} value={level}>
+                  {level}
+                </option>
+              ))}
+            </select>
+            {errors.maxLevelTroop && (
+              <span className="error-message">{errors.maxLevelTroop}</span>
+            )}
+          </div>
 
-        {/* Rally Capacity */}
-        <div className="form-group">
-          <label>Rally Capacity</label>
-          <input
-            type="number"
-            name="rallyCap"
-            value={formData.rallyCap}
-            onChange={handleChange}
-            className={errors.rallyCap ? "input-error" : ""}
-          />
-          {errors.rallyCap && (
-            <span className="error-message">{errors.rallyCap}</span>
-          )}
-        </div>
+          {/* Rally Capacity */}
+          <div className="form-group">
+            <label>Rally Capacity</label>
+            <input
+              type="number"
+              name="rallyCap"
+              value={formData.rallyCap}
+              onChange={handleChange}
+              className={errors.rallyCap ? "input-error" : ""}
+            />
+            {errors.rallyCap && (
+              <span className="error-message">{errors.rallyCap}</span>
+            )}
+          </div>
 
-        {/* Furnace Level */}
-        <div className="form-group">
-          <label>Furnace Level</label>
-          <select
-            name="furnaceLevel"
-            value={formData.furnaceLevel}
-            onChange={handleChange}
-            className={errors.furnaceLevel ? "input-error" : ""}
-          >
-            <option value="">Select your furnace level</option>
-            {furnaceLevelList.map((level) => (
-              <option key={level} value={level}>
-                {level}
-              </option>
-            ))}
-          </select>
-          {errors.furnaceLevel && (
-            <span className="error-message">{errors.furnaceLevel}</span>
-          )}
-        </div>
+          {/* Furnace Level */}
+          <div className="form-group">
+            <label>Furnace Level</label>
+            <select
+              name="furnaceLevel"
+              value={formData.furnaceLevel}
+              onChange={handleChange}
+              className={errors.furnaceLevel ? "input-error" : ""}
+            >
+              <option value="">Select your furnace level</option>
+              {furnaceLevelList.map((level) => (
+                <option key={level} value={level}>
+                  {level}
+                </option>
+              ))}
+            </select>
+            {errors.furnaceLevel && (
+              <span className="error-message">{errors.furnaceLevel}</span>
+            )}
+          </div>
 
-        {/* Power Level */}
-        <div className="form-group">
-          <label>Power Level</label>
-          <input
-            type="number"
-            name="powerLevel"
-            value={formData.powerLevel}
-            onChange={handleChange}
-            className={errors.powerLevel ? "input-error" : ""}
-          />
-          {errors.powerLevel && (
-            <span className="error-message">{errors.powerLevel}</span>
-          )}
-        </div>
+          {/* Power Level */}
+          <div className="form-group">
+            <label>Power Level</label>
+            <input
+              type="number"
+              name="powerLevel"
+              value={formData.powerLevel}
+              onChange={handleChange}
+              className={errors.powerLevel ? "input-error" : ""}
+            />
+            {errors.powerLevel && (
+              <span className="error-message">{errors.powerLevel}</span>
+            )}
+          </div>
 
-        {/* Submit Button */}
-        <button type="submit" className="submit-button">
-          Submit
-        </button>
-      </form>
+          {/* Submit Button */}
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
